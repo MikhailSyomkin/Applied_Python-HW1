@@ -38,7 +38,7 @@ if uploaded_file:
     
     st.subheader('Seasonal profiles')
     city_data['Month'] = pd.to_datetime(city_data['timestamp']).dt.month
-    seasonal_profile = city_data.groupby('Month')['Temperature'].agg(['mean', 'std'])
+    seasonal_profile = city_data.groupby('Month')['temperature'].agg(['mean', 'std'])
     st.write('Average Seasonal Temperature:', seasonal_profile)
     seasonal_profile.plot(kind='bar', y='mean', yerr='std', color='skyblue', legend=False)
     plt.xlabel('Month')
