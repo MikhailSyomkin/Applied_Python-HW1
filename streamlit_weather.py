@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 def get_weather(city, api_key):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
