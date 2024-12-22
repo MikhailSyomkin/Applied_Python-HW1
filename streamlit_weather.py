@@ -1,3 +1,11 @@
+import streamlit as st
+import requests
+import asyncio
+import aiohttp
+import nest_asyncio 
+import pandas as pd
+import numpy as np
+
 def get_weather(city, api_key):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
     response = requests.get(url)
