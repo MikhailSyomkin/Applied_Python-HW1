@@ -46,7 +46,7 @@ if uploaded_file:
     st.pyplot(plt)
 
 api_key = st.text_input('API key requred')
-current_season = st.text_input('Season')
+current_season = st.selectbox('Season', ['winter', 'spring', 'summer', 'autumn'])
 
 if api_key:
     st.subheader('Current Temperature')
