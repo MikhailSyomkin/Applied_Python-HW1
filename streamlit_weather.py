@@ -13,7 +13,7 @@ def get_weather(city, api_key):
         return {'cod': response.status_code, 'message': response.json().get('message', 'Error')}
 
 st.title('Temperature Data Analysis')
-uploaded_file = st.file_uploader('Load historical data', type='csv')
+uploaded_file = st.file_uploader('Load historical data (use df_temp_expanded from Git repo)', type='csv')
 
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
