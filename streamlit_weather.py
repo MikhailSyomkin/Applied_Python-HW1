@@ -46,7 +46,6 @@ if uploaded_file:
     st.pyplot(plt)
 
 api_key = st.text_input('API key requred')
-current_season = st.selectbox('Season', ['winter', 'spring', 'summer', 'autumn'])
 
 if api_key:
     st.subheader('Current Temperature')
@@ -55,6 +54,7 @@ if api_key:
         if weather.get('cod') == 200:
             current_temp = weather['main']['temp']
             st.write(f'''Current temperature in {city}: {current_temp}''')
+            current_season = st.selectbox('Select current season', ['winter', 'spring', 'summer', 'autumn'])
             if current_temp >= df[(df.city == selected_city)&(df.season == current_season)].anomaly_criteria_high.unique()[0]:
                 normality = 'anomaly, too high'
             if current_temp <= df[(df.city == selected_city)&(df.season == current_season)].anomaly_criteria_low.unique()[0]:
