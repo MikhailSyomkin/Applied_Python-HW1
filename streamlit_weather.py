@@ -61,6 +61,6 @@ if api_key:
                 normality = 'anomaly, too low'
             else:
                 normality = 'normal temperature'
-            print (f'''Temperature status: {normality}''')
+            st.text(f'''Temperature status: {normality}''')
         else:
             st.error({'cod':401, 'message': 'Invalid API key. Please see https://openweathermap.org/faq#error401 for more info.'})
