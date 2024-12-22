@@ -15,7 +15,6 @@ def get_weather(city, api_key):
 st.title('Temperature Data Analysis')
 st.text('This is an app designed to allow you to get insights on temperature-related data. To begin, upload a csv file containing histtorical data. We recommend using the preprocessed file from https://github.com/MikhailSyomkin/Applied_Python-HW1/blob/main/df_temp_expanded.csv')
 uploaded_file = st.file_uploader('Load historical data (use df_temp_expanded from Git repo)', type='csv')
-file_option = st.selectbox('I used the following file', ['df_temp_expanded.csv', 'Default file (temperature_data.csv)'])
 
 if uploaded_file:
     file_option = st.selectbox('I used the following file', ['df_temp_expanded.csv', 'Default file (temperature_data.csv)'])
