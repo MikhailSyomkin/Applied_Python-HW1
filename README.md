@@ -2,3 +2,4 @@
 - Код, используемый для приложения в Streamlit лежит в файле streamlit_weather.py
 - Ссылка на Streamlit: https://appliedpython-hw1-emkgecmmk5sdlymxvyddsv.streamlit.app
 - При использовании Streamlit можно использовать как уже предподготовленный файл df_temp_expanded.csv из данного репозитория, так и дефолтный файл temperature_data.csv
+- В файле ДЗ-1....ipynb указана старая версия кода для запуска Streamlit, актуальная версия лежит в streamlit_weather.py
